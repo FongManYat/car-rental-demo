@@ -6,4 +6,11 @@
         insert into contract_tbl(begindate, returndate, carId, customerInfo)
         values(#{begindate}, #{returndate},#{carId},#{customerInfo})
     </insert>
+    <!-- Query -->
+    <select id="queryAllContract" resultType="com.fwy.carrentaldemo.entity.Contract">
+        SELECT
+            *
+        FROM car_rental_db.contract_tbl
+        /*WHERE rentFlag = 0*/
+    </select>
 </mapper>

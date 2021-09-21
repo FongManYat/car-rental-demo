@@ -4,12 +4,14 @@ import com.fwy.carrentaldemo.entity.Contract;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 
 @Repository
 @Mapper
 public interface ContractMapper {
+
     int addNewContract(Contract contract);
 
-    //查询
-    //public List<ContractMapper> queryAllRent(ContractMapper rent);
+    List<Contract> queryAllContract();
 }

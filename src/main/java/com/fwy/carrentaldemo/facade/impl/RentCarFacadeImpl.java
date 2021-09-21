@@ -22,13 +22,15 @@ public class RentCarFacadeImpl implements IRentCarFacade {
 
     @Transactional(propagation = Propagation.REQUIRED)
     @Override
-    public int rentCar(Date begindate, Date returndate, int carId, String customerInfo) {
-        carService.updateCarRentFlag(carId);
-        Contract contract = new Contract();
-        contract.setCarId(carId);
-        contract.setBegindate(begindate);
-        contract.setReturndate(returndate);
-        contract.setCustomerInfo(customerInfo);
-        return contractService.addNewContract(contract);
+    public int rentCar(String begindate, String returndate, int carId, String customerInfo) {
+        if (carService.updateCarRentFlag(carId)==1){
+            Contract contract = new Contract();
+            contract.setCarId(carId);
+            contract.setBegindate(begindate);
+            contract.setReturndate(returndate);
+            contract.setCustomerInfo(customerInfo);
+            return contractService.addNewContract(contract);
+        }
+        return 0;
     }
 }

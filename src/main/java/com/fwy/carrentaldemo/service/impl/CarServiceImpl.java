@@ -23,8 +23,7 @@ public class CarServiceImpl implements ICarService {
     }
 
     @Override
-    public void updateCarRentFlag(int carId) {
-        carMapper.updateCarRentFlag(carId);
-
+    public int updateCarRentFlag(int carId) {
+        return carMapper.updateCarRentFlag(carId);
     }
 }

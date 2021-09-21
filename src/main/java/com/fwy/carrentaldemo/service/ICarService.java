@@ -16,5 +16,5 @@ public interface ICarService {
      * Rent car
      * @param carId
      */
-    public void updateCarRentFlag(int carId);
+    public int updateCarRentFlag(int carId);
 }

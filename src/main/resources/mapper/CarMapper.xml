@@ -12,6 +12,7 @@
     <update id="updateCarRentFlag" parameterType="java.lang.Integer">
         update car_tbl
         set rentFlag = 1
-        where carId = #{carID}
+        where carId = #{carID} and
+              rentFlag = 0
     </update>
 </mapper>

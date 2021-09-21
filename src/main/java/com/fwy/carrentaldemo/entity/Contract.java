@@ -8,11 +8,9 @@ import java.util.Date;
 public class Contract {
     private String contractId;
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private Date begindate;
+    private String begindate;
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private Date returndate;
+    private String returndate;
 
     private int carId;
 
@@ -34,19 +32,19 @@ public class Contract {
         this.contractId = contractId;
     }
 
-    public Date getBegindate() {
+    public String getBegindate() {
         return begindate;
     }
 
-    public void setBegindate(Date begindate) {
+    public void setBegindate(String begindate) {
         this.begindate = begindate;
     }
 
-    public Date getReturndate() {
+    public String getReturndate() {
         return returndate;
     }
 
-    public void setReturndate(Date returndate) {
+    public void setReturndate(String returndate) {
         this.returndate = returndate;
     }
 
