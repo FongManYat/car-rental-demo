@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fwy.carrentaldemo.mapper.CarMapper">
+    <!-- Query -->
+    <select id="queryAllCar" resultType="com.fwy.carrentaldemo.entity.Car">
+        SELECT
+            *
+        FROM car_rental_db.car_tbl
+        /*WHERE rentFlag = 0*/
+    </select>
+    <!-- Update -->
+    <update id="updateCarRentFlag" parameterType="java.lang.Integer">
+        update car_tbl
+        set rentFlag = 1
+        where carId = #{carID}
+    </update>
+</mapper>
