@@ -7,6 +7,7 @@ import com.fwy.carrentaldemo.facade.IRentCarFacade;
 import com.fwy.carrentaldemo.service.ICarService;
 import com.fwy.carrentaldemo.service.IContractService;
 import com.fwy.carrentaldemo.utils.DateUtils;
+import com.fwy.carrentaldemo.utils.JSONResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -50,7 +51,9 @@ public class CarRentalController {
         response.put("errmsg","Success");
         response.put("data",contractList);
 
-        return response;
+        JSONResult.fillResultString("0000","Success",contractList);
+
+        return JSONResult.fillResultString("0000","Success",contractList);
     }
 
     @PostMapping("/rentcar")

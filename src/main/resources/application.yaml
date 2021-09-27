@@ -1,11 +1,11 @@
 ·server:
-  port: 8080
+  port: 8881
 # DataSource Config
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/car_rental_db
     username: root
-    password: Atos.1912
+    password: password
 mybatis:
   mapper-locations: classpath*:/mapper/**Mapper.xml
 
